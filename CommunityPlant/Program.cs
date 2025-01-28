@@ -13,11 +13,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseMySQL(
-    builder.Configuration.GetConnectionString("mysql"),
-    mySqlOptions => mySqlOptions.ServerVersion(new MySqlServerVersion(new Version(8, 0, 2)))
-)
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("mysql"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("mysql"))
+    )
 );
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
