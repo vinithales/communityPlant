@@ -784,7 +784,7 @@ Criar o esqueleto da aplicação e configurar os projetos e dependências necess
      ```
 
 6. **Registrar Dependências no Startup/Program**
-   - Registre os serviços do **AutoMapper** e o **DbContext** em `Program.cs`:
+   - Registre os serviços do **AutoMapper** e o **DbContext*  * em `Program.cs`:
      ```csharp
      builder.Services.AddDbContext<AppDbContext>(options =>
          options.UseSqlServer("YourConnectionString"));

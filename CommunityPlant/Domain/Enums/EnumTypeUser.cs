@@ -1,4 +1,4 @@
-namespace CommunityPlant.Domain.Entities
+namespace CommunityPlant.Domain.Enums
 {
     public enum EnumTypeUser
     {
